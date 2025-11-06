@@ -12,6 +12,7 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/crown/proprietary/lib/liblatencybenchmarker.so:$(TARGET_COPY_OUT_SYSTEM)/lib/liblatencybenchmarker.so \
     vendor/amazon/crown/proprietary/lib/libmediaextension.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediaextension.so \
     vendor/amazon/crown/proprietary/lib/libsmartvolume.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsmartvolume.so \
+    vendor/amazon/crown/proprietary/lib/libtensorflowlite_c.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libtensorflowlite_c.so \
     vendor/amazon/crown/proprietary/vendor/firmware/EEPROM_MT7668.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/EEPROM_MT7668.bin \
     vendor/amazon/crown/proprietary/vendor/firmware/TxPwrLimit_MT76x8.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/TxPwrLimit_MT76x8.dat \
     vendor/amazon/crown/proprietary/vendor/firmware/WIFI_RAM_CODE2_SDIO_MT7668.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/WIFI_RAM_CODE2_SDIO_MT7668.bin \
@@ -22,28 +23,38 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/AFE.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/AFE.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/EQ_100.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/EQ_100.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/EQ_30.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/EQ_30.cfg \
-    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/EQ_40.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/EQ_40.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/EQ_50.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/EQ_50.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/EQ_70.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/EQ_70.cfg \
-    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/EQ_90.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/EQ_90.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/EdgeflowModelConfig.json:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/EdgeflowModelConfig.json \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/MBCL_10percent.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/MBCL_10percent.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/MBCL_20percent.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/MBCL_20percent.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/MBCL_VOIP.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/MBCL_VOIP.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/MBCL_VOIP_10percent.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/MBCL_VOIP_10percent.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/MBCL_VOIP_20percent.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/MBCL_VOIP_20percent.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/MBCL_default.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/MBCL_default.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/SpatialAudio_MonoEQ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/SpatialAudio_MonoEQ.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/SpatialAudio_SideContentEQ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/SpatialAudio_SideContentEQ.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/SpatialAudio_UnityEQ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/SpatialAudio_UnityEQ.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/SpatialAudio_XTC_Cont_FIR_d_546.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/SpatialAudio_XTC_Cont_FIR_d_546.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/SpatialAudio_XTC_Ipsi_FIR_d_546.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/SpatialAudio_XTC_Ipsi_FIR_d_546.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/SpatialAudio_ZeroEQ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/SpatialAudio_ZeroEQ.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/UserEQ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/UserEQ.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/VOIPRxParametricEQ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/VOIPRxParametricEQ.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/VOIPTxParametricEQ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/VOIPTxParametricEQ.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/asp.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/asp.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FBF.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FBF.cfg \
-    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FBFV2_Diffused_8beams.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FBFV2_Diffused_8beams.cfg \
-    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FBFV2_Normal_8beams.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FBFV2_Normal_8beams.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FBFV2_LowLatency_8beams.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FBFV2_LowLatency_8beams.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FilterBank_160.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FilterBank_160.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FilterBank_640.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FilterBank_640.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FilterBank_AnaSyn_M512_D128_Lh512.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FilterBank_AnaSyn_M512_D128_Lh512.cfg \
-    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FilterBank_AnalysisSynthesis_1024.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FilterBank_AnalysisSynthesis_1024.cfg \
-    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FilterBank_AnalysisSynthesis_1280.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FilterBank_AnalysisSynthesis_1280.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/coefs_FilterBank_AnalysisSynthesis_768cvxGLow.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/coefs_FilterBank_AnalysisSynthesis_768cvxGLow.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/dtd_cpd_priors.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/dtd_cpd_priors.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/es_cpd_priors.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/es_cpd_priors.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/hamming512_earcon.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/hamming512_earcon.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/ue_cpd_priors.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/ue_cpd_priors.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/vad_cpd_priors.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/vad_cpd_priors.cfg \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/vad_lite.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/vad_lite.tflite \
+    vendor/amazon/crown/proprietary/vendor/etc/audio-algorithms/vss_cpd_priors.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio-algorithms/vss_cpd_priors.cfg \
     vendor/amazon/crown/proprietary/vendor/etc/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
     vendor/amazon/crown/proprietary/vendor/etc/audio_em.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_em.xml \
     vendor/amazon/crown/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
