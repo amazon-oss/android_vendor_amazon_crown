@@ -12,7 +12,6 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/crown/proprietary/lib/liblatencybenchmarker.so:$(TARGET_COPY_OUT_SYSTEM)/lib/liblatencybenchmarker.so \
     vendor/amazon/crown/proprietary/lib/libmediaextension.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmediaextension.so \
     vendor/amazon/crown/proprietary/lib/libsmartvolume.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsmartvolume.so \
-    vendor/amazon/crown/proprietary/lib/libtensorflowlite_c.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libtensorflowlite_c.so \
     vendor/amazon/crown/proprietary/vendor/firmware/EEPROM_MT7668.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/EEPROM_MT7668.bin \
     vendor/amazon/crown/proprietary/vendor/firmware/TxPwrLimit_MT76x8.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/TxPwrLimit_MT76x8.dat \
     vendor/amazon/crown/proprietary/vendor/firmware/WIFI_RAM_CODE2_SDIO_MT7668.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/WIFI_RAM_CODE2_SDIO_MT7668.bin \
