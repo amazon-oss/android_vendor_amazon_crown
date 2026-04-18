@@ -36,8 +36,8 @@
     <kctl name="ADC_A DIF1_R Input Gain" value="0" />
     <kctl name="ADC_B DIF1_L Input Gain" value="0" />
     <kctl name="ADC_B DIF1_R Input Gain" value="0" />
-    <kctl name="ADC_A MICPGA Volume Ctrl" value="40" />
-    <kctl name="ADC_B MICPGA Volume Ctrl" value="40" />
+    <kctl name="ADC_A MICPGA Volume Ctrl" value="80" />
+    <kctl name="ADC_B MICPGA Volume Ctrl" value="80" />
     <kctl name="SpiTimeStamps" value="Off" />
     <!-- TLV3101 ADC -->
     <!--external_speaker output-->
