@@ -6,6 +6,9 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/amazon/crown
 
 PRODUCT_COPY_FILES += \
+    vendor/amazon/crown/proprietary/vendor/etc/.tp/thermal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.conf \
+    vendor/amazon/crown/proprietary/vendor/etc/.tp/thermal.off.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.off.conf \
+    vendor/amazon/crown/proprietary/vendor/etc/.tp/thermal.policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.policy.conf \
     vendor/amazon/crown/proprietary/vendor/lib/libcameracustom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcameracustom.so \
     vendor/amazon/crown/proprietary/etc/audio_device.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_device.xml \
     vendor/amazon/crown/proprietary/lib/libasp.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libasp.so \
