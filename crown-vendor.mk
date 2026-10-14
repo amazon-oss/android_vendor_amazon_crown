@@ -62,7 +62,6 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/crown/proprietary/vendor/etc/audio_em.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_em.xml \
     vendor/amazon/crown/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
     vendor/amazon/crown/proprietary/vendor/lib/hw/audio.primary_amazon.mt8163.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary_amazon.mt8163.so \
-    vendor/amazon/crown/proprietary/vendor/lib/hw/audio.usb.mt8163.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.usb.mt8163.so \
     vendor/amazon/crown/proprietary/vendor/lib/libaudiocompensationfilter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudiocompensationfilter.so \
     vendor/amazon/crown/proprietary/vendor/lib/libaudiocomponentengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudiocomponentengine.so \
     vendor/amazon/crown/proprietary/vendor/lib/libaudiocustparam.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudiocustparam.so \
